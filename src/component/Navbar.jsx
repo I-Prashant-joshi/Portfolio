@@ -37,7 +37,7 @@ function Navbar() {
   );
 
   return (
-    <header className="fixed  lg:pl-20 lg:pr-20 bg-[#52525365] w-full h-12 flex items-center justify-between select-none z-50 lg:h-16 md:h-12">
+    <header className="fixed lg:pl-20 lg:pr-20 bg-[#52525365] w-full h-12 flex items-center justify-between select-none z-50 lg:h-16 md:h-12">
       <div className='flex items-center justify-between w-full'>
       <div className="h-full w-[7rem] flex items-center">
         <img src={logo} alt="Logo" className="w-[2.3rem] ml-5 lg:ml-0 lg:w-[3rem]" />
