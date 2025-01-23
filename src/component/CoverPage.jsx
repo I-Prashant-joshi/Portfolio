@@ -2,7 +2,10 @@ import React from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ComputerCanvas from './Computer';
+import { motion, useTransform,useScroll } from 'framer-motion';
 function CoverPage() {
+    const {scrollY}= useScroll()
+    const opacity= useTransform(scrollY,[0,120],[1,0])
     useGSAP(()=>{
         gsap.from("#nameContent p",{
             x:150,
@@ -12,7 +15,6 @@ function CoverPage() {
             stagger:0.5         
         })
     },[])
-    
   return (
     <section className='relative w-full h-screen mx-auto'>
         <div className='absolute top-[120px] flex flex-row items-start max-w-7xl ml-[2rem] lg:ml-[10rem] gap-5'>
@@ -28,6 +30,19 @@ function CoverPage() {
             </div>
         </div>
         <ComputerCanvas />
+        <div className=' absolute flex w-full bottom-0 justify-center items-center '>
+            <a href='#about'>
+                <motion.div className='h-[64px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 ' style={{opacity}}>
+               
+                    <motion.div
+      initial={{ y: 0, opacity: 1 }}
+      animate={{ y: 20, opacity: 0.3 }}
+      transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+      className="w-3 h-3 rounded-full bg-slate-300 mb-5"
+    />
+                </motion.div>
+            </a>
+        </div>
     </section>
   )
 }
