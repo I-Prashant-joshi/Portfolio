@@ -1,13 +1,14 @@
+import img from '../assets/herobg.png'
 const particleConfig = {
     autoPlay: true,
     background: {
       color: {
-        value: "#000"
+        value: "#000000"
       },
-      image: "",
+      image: `url(${img})`,
       position: "",
       repeat: "",
-      size: "",
+      size: "cover",
       opacity: 1
     },
     backgroundMask: {

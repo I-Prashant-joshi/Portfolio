@@ -10,8 +10,8 @@ function Computer() {
     const computerdata = useGLTF('/desktop_pc/scene.gltf');
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const size= isSmallScreen ? 0.40 : 0.67
-    const modelposition =isSmallScreen ? [1,-2.8,-0.5] : [1.2,-2.8,-1.5]
+    const size= isSmallScreen ? 0.38 : 0.67
+    const modelposition =isSmallScreen ? [1,-2.5,-0.5] : [1.2,-2.8,-1.5]
     const modelRotation = isSmallScreen ?  [0,-0.3,-0.1] : [0,-0.7,-0.1] 
   return (
     <mesh>
@@ -43,7 +43,7 @@ const  ComputerCanvas = () => {
       <Preload all />
 
 
-      
+
     </Canvas>
   );
 }

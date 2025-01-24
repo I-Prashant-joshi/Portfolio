@@ -32,7 +32,7 @@ function CoverPage() {
         <ComputerCanvas />
         <div className=' absolute flex w-full bottom-0 justify-center items-center '>
             <a href='#about'>
-                <motion.div className='h-[64px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 ' style={{opacity}}>
+                <motion.div className='h-[54px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 ' style={{opacity}}>
                
                     <motion.div
       initial={{ y: 0, opacity: 1 }}

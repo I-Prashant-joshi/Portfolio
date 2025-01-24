@@ -10,16 +10,15 @@ function App() {
   const [count, setCount] = useState(0)
   const {scrollY}= useScroll()
   const opacity= useTransform(scrollY,[100,600],[1,0])
+
   return (
     <BrowserRouter>
   <div className="mainDiv" >
-    <motion.div className='coverPage' style={{opacity}}>
           <Navbar />
+    <motion.div className='coverPage' style={{opacity}}>
           <CoverPage />
     </motion.div>
-
           <AboutME />
-
   </div> 
     </BrowserRouter>
   )
