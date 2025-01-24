@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import logo from '../../src/assets/PLogo.png';
 import { navData } from '../constant/const';
 import Box from '@mui/material/Box';
@@ -20,7 +20,7 @@ function Navbar() {
 
 
   const list = () => (
-    <Box sx={{ width: 150 }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+    <Box sx={{ width: 150,height:"100%",backgroundColor:"black" }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
         {navData.map((text) => (
           <ListItem key={text.key} disablePadding>
