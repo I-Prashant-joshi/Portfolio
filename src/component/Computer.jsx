@@ -11,7 +11,7 @@ function Computer() {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const size= isSmallScreen ? 0.38 : 0.67
-    const modelposition =isSmallScreen ? [1,-2.2,-0.5] : [1.2,-2.8,-1.5]
+    const modelposition =isSmallScreen ? [1,-2,-0.5] : [1.2,-2.8,-1.5]
     const modelRotation = isSmallScreen ?  [0,-0.3,-0.1] : [0,-0.7,-0.1] 
   return (
     <mesh>
@@ -27,12 +27,8 @@ function Computer() {
 
 const  ComputerCanvas = () => {
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      camera={{ position: [20, 3, 5], fov: 25 }} 
-      gl={{preserveDrawingBuffer:true}}
-    >
+    <Canvas dpr={[1, 2]} frameloop="demand" shadows camera={{ position: [20, 3, 5], fov: 25 }} >
+
         <ambientLight intensity={0.45} />
         <spotLight intensity={0.75} position={[-30,50,10]} angle={0.15} shadow-mapSize={1025} />
         

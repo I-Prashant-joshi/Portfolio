@@ -5,7 +5,7 @@ import ComputerCanvas from './Computer';
 import { motion, useTransform,useScroll } from 'framer-motion';
 function CoverPage() {
     const {scrollY}= useScroll()
-    const opacity= useTransform(scrollY,[0,120],[1,0])
+    const opacity= useTransform(scrollY,[100,600],[1,0])
     useGSAP(()=>{
         gsap.from("#nameContent p",{
             x:150,
@@ -16,8 +16,9 @@ function CoverPage() {
         })
     },[])
   return (
-    <section className='relative w-full h-screen mx-auto'>
-        <div className='absolute top-[120px] flex flex-row items-start max-w-7xl ml-[2rem] lg:ml-[10rem] gap-5'>
+    <motion.div className='coverPage' style={{opacity}}>
+    <section className='relative w-full h-screen '>
+        <div className='absolute top-[90px] lg:top-[120px] flex flex-row items-start max-w-7xl ml-[2rem] lg:ml-[10rem] gap-5'>
             <div className='flex flex-row justify-center gap-5 w-full '>
                 <div className='flex flex-col justify-center items-center'>
                 <div className='w-[1rem] h-[1rem] rounded-full bg-[#540bfe]'></div>
@@ -44,6 +45,7 @@ function CoverPage() {
             </a>
         </div>
     </section>
+    </motion.div>
   )
 }
 
