@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import Particles from "react-tsparticles";
 import partcleConfig from "./AboutmeConfig";
 import { loadSlim } from "tsparticles-slim";
-import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
+import { easeIn, easeInOut, motion, useScroll, useTransform } from "framer-motion";
 import mypic from "../assets/myPic.jpg";
 import { useMediaQuery, useTheme } from "@mui/material";
 
@@ -36,7 +36,7 @@ function AboutME() {
       ></Particles>
       <section className="flex flex-col lg:flex-row">
         <motion.div className="flex-1 h-screen relative">
-          <motion.div className="w-[200px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] absolute top-[180px] left-[90px] lg:left-[80px] lg:top-[100px] rounded-full overflow-hidden "
+          <motion.div className="w-[200px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] absolute top-[170px] left-[90px] lg:left-[80px] lg:top-[100px] rounded-full overflow-hidden"
            style={{
             transform:"translate(40px,50px )",
             boxShadow: "0 0 15px 5px rgba(176, 108, 249, 0.7)", 
@@ -54,7 +54,7 @@ function AboutME() {
         <motion.div className="flex-1 h-screen text-center m-auto overflow-hidden">
 
         <motion.h1
-      className="text-[4rem] mt-[50px] lg:mt-[100px] font-mono text-[#a024ff]"
+      className="text-[3.5rem] lg:text-[4rem] mt-[50px] lg:mt-[100px] font-mono text-[#a024ff]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -88,8 +88,8 @@ function AboutME() {
           initial={{opacity:0,x:200}}
           whileInView={{opacity:1,x:0}}
           exit={{opacity:0}}
-          transition={{duration:1.7,ease:easeInOut}}
-          viewport={{ once: false, margin: `0px 0px ${isSmallScreen ?"-35%":"-60%"} 0px` }} 
+          transition={{duration:1.5,ease:easeInOut}}
+          viewport={{ once: false, margin: `0px 0px ${isSmallScreen ?"-40%":"-60%"} 0px` }} 
           >
           <div>
           Hi there! I’m <span className="text-[#a024ff] text-[1.2rem] lg:text-[1.7rem] overflow-hidden">Prashant Joshi </span>, a passionate <strong className="text-[1.2rem] lg:text-[1.7rem] overflow-hidden">React.js developer </strong> with over a year of experience building interactive, user-friendly web applications. I specialize in creating dynamic front-end experiences, but recently, I’ve expanded my skills to Node.js, focusing on building robust back-end systems.
