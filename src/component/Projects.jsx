@@ -77,12 +77,12 @@ function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: false, margin:`0px 0px ${isSmallScreen?"-5%":"-20%"} 0px` }}
-                className="flex-1 h-[100%] mt-[10px] lg:mt-[100px]">
+                className="flex-1 h-[100%] mt-[2px] lg:mt-[100px]">
                     <p className="text-center text-[2rem] lg:text-[3rem]">{item.projectName}</p>
-                    <p className="text-[1rem] lg:text-[1.8rem] text-justify p-2 lg:p-0 lg:pr-[50px]">
+                    <p className="text-[0.8rem] lg:text-[1.5rem] text-justify p-2 lg:p-0 lg:pr-[50px]">
                         {item.description}
                     </p>
-                    <p className="text-[1rem] lg:text-[1.5rem] mt-4">
+                    <p className="text-[0.7rem] lg:text-[1.5rem] mt-4">
                         Technologies Used :  {item.techUsed}    
                     </p>
                     <motion.div  
