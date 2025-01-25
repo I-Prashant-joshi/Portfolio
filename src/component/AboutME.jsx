@@ -45,8 +45,8 @@ function AboutME() {
           initial={{opacity:0,x: isSmallScreen ? -200 :-300}}
           whileInView={{opacity:1,x:0}}
           exit={{opacity:0}}
-          transition={{duration:1,ease:easeInOut}}
-          viewport={{ once: false, margin: "0px 0px -50% 0px" }} 
+          transition={{duration:1.5,ease:easeInOut,}}
+          viewport={{ once: false, margin: "0px 0px -40% 0px" }} 
           >
             <img src={mypic} alt="Photo" style={{marginTop:isSmallScreen ? "-50px":"-100px"}} />
           </motion.div>
@@ -89,7 +89,7 @@ function AboutME() {
           whileInView={{opacity:1,x:0}}
           exit={{opacity:0}}
           transition={{duration:1.5,ease:easeInOut}}
-          viewport={{ once: false, margin: `0px 0px ${isSmallScreen ?"-40%":"-60%"} 0px` }} 
+          viewport={{ once: false, margin: `0px 0px -40% 0px` }} 
           >
           <div>
           Hi there! I’m <span className="text-[#a024ff] text-[1.2rem] lg:text-[1.7rem] overflow-hidden">Prashant Joshi </span>, a passionate <strong className="text-[1.2rem] lg:text-[1.7rem] overflow-hidden">React.js developer </strong> with over a year of experience building interactive, user-friendly web applications. I specialize in creating dynamic front-end experiences, but recently, I’ve expanded my skills to Node.js, focusing on building robust back-end systems.

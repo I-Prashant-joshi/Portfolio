@@ -5,6 +5,7 @@ import Navbar from './component/Navbar'
 import CoverPage from './component/CoverPage'
 import AboutME from './component/AboutME'
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Projects from './component/Projects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
           <CoverPage />
     </motion.div>
           <AboutME />
+          <Projects />
   </div> 
     </BrowserRouter>
   )
