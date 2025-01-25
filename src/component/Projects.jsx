@@ -34,7 +34,7 @@ function Projects() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-30%":"-80%"} 0px` }}
+        viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-30%":"-50%"} 0px` }}
       >
         Projects
       </motion.div>
@@ -43,7 +43,7 @@ function Projects() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-30%":"-75%"} 0px` }}
+        viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-30%":"-60%"} 0px` }}
       >
         <div className="text-[1rem] lg:text-[1.03rem] mt-[5px] lg:mt-[10px] lg:ml-[100px] font-mono bg-gradient-to-br from-white to-[#9e9d9f] bg-clip-text text-transparent flex justify-center w-[100%] lg:w-[70%]">
             {
@@ -59,26 +59,26 @@ function Projects() {
             }
         </div>
       </motion.div>
-      <div className="mt-[10px] lg:mt-[50px]">
+      <div className="mt-[10px] lg:mt-[100px]">
       <Carousel responsive={responsive} swipeable={true} >
         {
             projectsData.map((item,index)=>(
-                <div key={index} className="flex flex-col lg:flex-row h-[80vh] lg:h-[70vh]">
+                <div key={index} className="flex flex-col lg:flex-row">
                 <motion.div
                 initial={{ opacity: 0, y: 250 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
-                viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-20%":"-40%"} 0px` }}
-                className="flex h-[100%] w-[100%] lg:w-[45%] justify-center items-center p-5 lg:p-10 rounded-2xl">
+                viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-20%":"-30%"} 0px` }}
+                className="flex h-[100%] w-[100%] lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
                     <img src={item.source} alt="image"  className="h-[200px] lg:h-[500px] rounded-2xl"/>
                 </motion.div>
                 <motion.div 
                 initial={{ opacity: 0, y: 250 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
-                viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-5%":"-30%"} 0px` }}
+                viewport={{ once: false, margin:`0px 0px ${isSmallScreen?"-5%":"-20%"} 0px` }}
                 className="flex-1 h-[100%] mt-[10px] lg:mt-[100px]">
-                    <p className="text-center text-[2rem] lg:text-[3rem] ">{item.projectName}</p>
+                    <p className="text-center text-[2rem] lg:text-[3rem]">{item.projectName}</p>
                     <p className="text-[1rem] lg:text-[1.8rem] text-justify p-2 lg:p-0 lg:pr-[50px]">
                         {item.description}
                     </p>
