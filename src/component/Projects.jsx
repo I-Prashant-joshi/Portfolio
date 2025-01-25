@@ -68,7 +68,7 @@ function Projects() {
                 initial={{ opacity: 0, y: 250 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
-                viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-20%":"-30%"} 0px` }}
+                viewport={{ once: false, margin: `0px 0px ${isSmallScreen?"-10%":"-30%"} 0px` }}
                 className="flex h-[100%] w-[100%] lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
                     <img src={item.source} alt="image"  className="h-[200px] lg:h-[500px] rounded-2xl"/>
                 </motion.div>
@@ -76,7 +76,7 @@ function Projects() {
                 initial={{ opacity: 0, y: 250 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
-                viewport={{ once: false, margin:`0px 0px ${isSmallScreen?"-5%":"-20%"} 0px` }}
+                viewport={{ once: false, margin:`0px 0px ${isSmallScreen?"-2%":"-20%"} 0px` }}
                 className="flex-1 h-[100%] mt-[2px] lg:mt-[100px]">
                     <p className="text-center text-[2rem] lg:text-[3rem]">{item.projectName}</p>
                     <p className="text-[0.8rem] lg:text-[1.5rem] text-justify p-2 lg:p-0 lg:pr-[50px]">
