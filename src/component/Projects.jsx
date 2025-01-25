@@ -77,7 +77,7 @@ function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true, margin:`0px 0px ${isSmallScreen ? "-2%":"-20%"} 0px` }}
-                className=" mt-[10px] lg:mt-[50px]">
+                className="flex-1 mt-[10px] lg:mt-[50px]">
                     <p className="text-center text-[2rem] lg:text-[3rem]">{item.projectName}</p>
                     <p className="text-[0.8rem] lg:text-[1.5rem] text-justify p-2 lg:p-0 lg:pr-[50px] mt-0 lg:mt-[20px]">
                         {item.description}

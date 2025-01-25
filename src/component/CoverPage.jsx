@@ -16,8 +16,8 @@ function CoverPage() {
         })
     },[])
   return (
-    <motion.div className='coverPage' style={{opacity}}>
-    <section className='relative w-full h-screen '>
+    <motion.div className='coverPage' style={{opacity,height:"100vh"}} >
+    <section className='relative w-full  h-full'>
         <div className='absolute top-[90px] lg:top-[120px] flex flex-row items-start max-w-7xl ml-[2rem] lg:ml-[10rem] gap-5'>
             <div className='flex flex-row justify-center gap-5 w-full '>
                 <div className='flex flex-col justify-center items-center'>

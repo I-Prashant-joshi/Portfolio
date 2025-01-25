@@ -28,17 +28,13 @@ function Computer() {
 const  ComputerCanvas = () => {
   return (
     <Canvas dpr={[1, 2]} frameloop="demand" shadows camera={{ position: [20, 3, 5], fov: 25 }} >
-
         <ambientLight intensity={0.45} />
         <spotLight intensity={0.75} position={[-30,50,10]} angle={0.15} shadow-mapSize={1025} />
-        
       <Suspense fallback={<CanvaLoader />}>
       <OrbitControls enableZoom={false} maxPolarAngle={Math.PI/2} minPolarAngle={Math.PI/2}/>
         <Computer />
       </Suspense>
       <Preload all />
-
-
 
     </Canvas>
   );
