@@ -21,7 +21,7 @@ function AboutME() {
   }, []);
   return (
     <div >
-      {/* <Particles
+      <Particles
         loaded={particlesLoaded}
         id="tsparticles"
         style={{
@@ -33,7 +33,7 @@ function AboutME() {
         }}
         options={partcleConfig}
         init={particlesInit}
-      ></Particles> */}
+      ></Particles>
       <section className="flex flex-col lg:flex-row">
         <motion.div className="flex-1 relative">
           <motion.div className="w-[200px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] absolute top-[170px] left-[90px] lg:left-[80px] lg:top-[100px] rounded-full overflow-hidden"
