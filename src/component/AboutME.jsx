@@ -20,8 +20,8 @@ function AboutME() {
     await console.log(container);
   }, []);
   return (
-    <div className="h-screen w-full">
-      <Particles
+    <div >
+      {/* <Particles
         loaded={particlesLoaded}
         id="tsparticles"
         style={{
@@ -29,13 +29,13 @@ function AboutME() {
           top: 0,
           left: 0,
           width: "100%",
-          height: "100vh",
+        //   height: "100vh",
         }}
         options={partcleConfig}
         init={particlesInit}
-      ></Particles>
+      ></Particles> */}
       <section className="flex flex-col lg:flex-row">
-        <motion.div className="flex-1 h-screen relative">
+        <motion.div className="flex-1 relative">
           <motion.div className="w-[200px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] absolute top-[170px] left-[90px] lg:left-[80px] lg:top-[100px] rounded-full overflow-hidden"
            style={{
             transform:"translate(40px,50px )",
@@ -51,7 +51,7 @@ function AboutME() {
             <img src={mypic} alt="Photo" style={{marginTop:isSmallScreen ? "-50px":"-100px"}} />
           </motion.div>
         </motion.div>
-        <motion.div className="flex-1 h-screen text-center m-auto overflow-hidden">
+        <motion.div className="flex-1  text-center m-auto overflow-hidden">
 
         <motion.h1
       className="text-[3.5rem] lg:text-[4rem] mt-[50px] lg:mt-[100px] font-mono text-[#a024ff]"
