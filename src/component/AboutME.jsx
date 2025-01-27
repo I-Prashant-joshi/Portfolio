@@ -1,8 +1,8 @@
-import React, { useCallback, useState } from "react";
+import  { useCallback, useState } from "react";
 import Particles from "react-tsparticles";
 import partcleConfig from "./AboutmeConfig";
 import { loadSlim } from "tsparticles-slim";
-import { easeIn, easeInOut, motion, useScroll, useTransform } from "framer-motion";
+import { easeInOut, motion} from "framer-motion";
 import mypic from "../assets/myPic.jpg";
 import { useMediaQuery, useTheme } from "@mui/material";
 
@@ -45,7 +45,7 @@ function AboutME() {
           whileInView={{opacity:1,x:0}}
           exit={{opacity:0}}
           transition={{duration:1.5,ease:easeInOut,}}
-          viewport={{ once: false, margin: "0px 0px -40% 0px" }} 
+          viewport={{ once: isSmallScreen ? true :false, margin: "0px 0px -40% 0px" }} 
           >
             <img src={mypic} alt="Photo" style={{marginTop:isSmallScreen ? "-50px":"-100px"}} />
           </motion.div>
@@ -80,7 +80,7 @@ function AboutME() {
         whileInView={{ scaleX: 1 }}
         exit={{ scaleX: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        viewport={{ once: false, margin: "0px 0px -50% 0px" }} 
+        viewport={{ once: isSmallScreen ? true :false, margin: "0px 0px -50% 0px" }} 
       ></motion.div>
     </motion.h1>
           <motion.div className="text-[1rem] mt-[250px] lg:mt-[120px] font-light p-3 lg:p-8 leading-6 lg:leading-10 lg:text-[1.5rem] text-justify lg:text-normal overflow-hidden "
@@ -88,7 +88,7 @@ function AboutME() {
           whileInView={{opacity:1,x:0}}
           exit={{opacity:0}}
           transition={{duration:1.5,ease:easeInOut}}
-          viewport={{ once: false, margin: `0px 0px -40% 0px` }} 
+          viewport={{ once: isSmallScreen ? true :false, margin: `0px 0px -40% 0px` }} 
           >
           <div>
           Hi there! I’m <span className="text-[#a024ff] text-[1.2rem] lg:text-[1.7rem] overflow-hidden">Prashant Joshi </span>, a passionate <strong className="text-[1.2rem] lg:text-[1.7rem] overflow-hidden">React.js developer </strong> with over a year of experience building interactive, user-friendly web applications. I specialize in creating dynamic front-end experiences, but recently, I’ve expanded my skills to Node.js, focusing on building robust back-end systems.

@@ -10,14 +10,12 @@
 }
 body{
   background-color: rgb(44, 43, 43);
-  /* overflow: hidden; */
-  /* touch-action: manipulation; */
+  
 }
 .coverPage{
   background-image: url('./assets/herobg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
   
 }
