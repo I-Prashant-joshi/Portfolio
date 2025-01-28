@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { projectsData } from "./Constants";
 import { useMediaQuery, useTheme } from "@mui/material";
+import ComponentMainFrame from "./ComponentMainFrame";
 function Projects() {
     const theme = useTheme()
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -60,7 +61,7 @@ function Projects() {
         </div>
       </motion.div>
       <div className="mt-[10px] lg:mt-[100px]">
-      <Carousel responsive={responsive} swipeable={true} >
+      <Carousel responsive={responsive} swipeable={true} autoPlay={true} infinite={true} transitionDuration={5000} autoPlaySpeed={5000} >
         {
             projectsData.map((item,index)=>(
                 <div key={index} className="flex flex-col lg:flex-row">
@@ -107,4 +108,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ComponentMainFrame(Projects,"projects");

@@ -9,6 +9,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-scroll';
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false); 
   const toggleDrawer = (open) => (event) => {
@@ -23,12 +24,14 @@ function Navbar() {
     <Box sx={{ width: 150,height:"100%",backgroundColor:"black" }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
         {navData.map((text) => (
-          <ListItem key={text.key} disablePadding>
+          <Link key={text.key} to={text.linkname} smooth={true} duration={500}>
+          <ListItem  disablePadding>
             <ListItemButton  style={{color:'#9d07f5',fontWeight:"bold",
           }}>
               <ListItemText primary={text.name} className='ml-3 '/>
             </ListItemButton>
           </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
@@ -44,11 +47,11 @@ function Navbar() {
       </div>
       <div className="hidden lg:flex gap-10 ml-10">
         {navData?.map((item) => (
-          <nav key={item.key}
+          <Link key={item.key} to={item.linkname} smooth={true} duration={500}
           className="font-bold lg:font-serif cursor-pointer text-[1.4rem] pt-2 text-[white]"
            >
             {item.name}
-          </nav>
+          </Link>
         ))}
       </div>
       </div>

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ComputerCanvas from './Computer';
 import { motion, useTransform,useScroll } from 'framer-motion';
+import { Link } from "react-scroll";
 function CoverPage() {
     const {scrollY}= useScroll()
     const opacity= useTransform(scrollY,[100,600],[1,0])
@@ -31,10 +32,9 @@ function CoverPage() {
             </div>
         </div>
         <ComputerCanvas />
-        <div className=' absolute flex w-full bottom-0 justify-center items-center '>
-            <a href='#about'>
+        <div className=' absolute flex w-full bottom-0 justify-center items-center cursor-pointer '>
+            <Link to='about' smooth={true}>
                 <motion.div className='h-[54px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 ' style={{opacity}}>
-               
                     <motion.div
       initial={{ y: 0, opacity: 1 }}
       animate={{ y: 20, opacity: 0.3 }}
@@ -42,7 +42,7 @@ function CoverPage() {
       className="w-3 h-3 rounded-full bg-slate-300 mb-5"
     />
                 </motion.div>
-            </a>
+            </Link>
         </div>
     </section>
     </motion.div>

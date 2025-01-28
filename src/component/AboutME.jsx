@@ -5,6 +5,7 @@ import { loadSlim } from "tsparticles-slim";
 import { easeInOut, motion} from "framer-motion";
 import mypic from "../assets/myPic.jpg";
 import { useMediaQuery, useTheme } from "@mui/material";
+import ComponentMainFrame from "./ComponentMainFrame";
 
 function AboutME() {    
     const theme = useTheme();
@@ -110,4 +111,4 @@ function AboutME() {
   );
 }
 
-export default AboutME;
+export default ComponentMainFrame(AboutME,"about");

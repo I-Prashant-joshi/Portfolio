@@ -1,6 +1,8 @@
 import omniFood from '../assets/omniFood.png'
 import shop from '../assets/3dshop.png'
 import movie from '../assets/movieApp.png'
+import ectromart from '../assets/ElectroMart.png'
+
 
 
 export const projectsData=[
@@ -24,6 +26,13 @@ export const projectsData=[
         description:"Created a fully responsive movie application showcasing the latest movies and TV shows. Integrated the TMDB API for dynamic content fetching, implemented Redux for efficient state management, and crafted intuitive, mobile-friendly user interfaces using Tailwind CSS.",
         techUsed:" React.js, HTML, Tailwind CSS, Javascript",
         link:"https://cinematicshows.netlify.app"
+    }, 
+    {
+        projectName:"ElectroMart",
+        source:ectromart,
+        description:"Developed a full-featured e-commerce web application using the MERN stack (MongoDB, Express.js, React, Node.js). The platform supports both buyer and seller accounts, enabling sellers to add products and buyers to browse, add items to their cart, and view detailed product descriptions. The project integrates modern technologies such as React, Redux for state management, MUI for a sleek UI, and Node.js for backend operations.",
+        techUsed:" React.js, HTML, MUI, Javascript,Node.js,Express.js",
+        link:"https://electromaartweb.netlify.app"
     }, 
  
 
