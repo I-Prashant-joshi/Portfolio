@@ -51,7 +51,7 @@ function AboutME() {
             <img src={mypic} alt="Photo" style={{marginTop:isSmallScreen ? "-50px":"-100px"}} />
           </motion.div>
         </motion.div>
-        <motion.div className="flex-1  text-center m-auto overflow-hidden">
+        <motion.div className="flex-1  text-center m-auto overflow-hidden pr-[0px] lg:pr-[100px]">
 
         <motion.h1
       className="text-[3.5rem] lg:text-[4rem] mt-[50px] lg:mt-[100px] font-mono text-[#a024ff]"

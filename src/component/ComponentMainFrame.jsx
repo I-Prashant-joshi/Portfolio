@@ -4,14 +4,14 @@ import { motion } from 'framer-motion'
 const ComponentMainFrame = (Component,name) => (props)=> {
     return (
     <motion.section
-    id={name}
     initial="hidden"
     whileInView="show"
     >
         <span id={name}>
             &nbsp;
         </span>
-    <Component {...props} />
+    <Component  {...props} >
+    </Component>
     </motion.section>
 )
 }

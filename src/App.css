@@ -20,3 +20,30 @@ body{
   background-position: center;
   
 }
+.inputField{
+  border:none;
+  outline:none;
+  height: 40px;
+  width: 300px;
+  margin:10px 0px;
+  color:rgb(141, 9, 235);
+  font-weight:500;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.inputFieldMessage{
+  border:none;
+  outline:none;
+  margin:10px 0px;
+  color:rgb(141, 9, 235);
+  font-weight:500;
+  padding: 10px;
+  border-radius: 5px;
+}
+.formDiv{
+  background-color: rgba(158, 99, 203, 0.13);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  border: 0px solid rgba(158, 99, 203, 0.13);
+  border-radius: 20px;
+}
