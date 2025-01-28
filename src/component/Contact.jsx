@@ -29,27 +29,27 @@ function Contact() {
        Contact
       </motion.div>
         <div className='flex flex-col lg:flex-row mt-2 lg:mt-3'>
-        <div className='formDiv p-[2rem] lg:p-[4rem] h-full'>
+        <div className='formDiv p-[2rem] lg:p-[4rem] h-[300px] lg:h-full '>
           <form>
-              <div className='mb-4'>
-              <label htmlFor="name" className='text-[1.5rem]'>Your Name:</label> <br></br>
-              <input className='inputField' type='text' name='name' placeholder='Please enter your name here' value={form.name} onChange={handleChange} />
+           
+              <div className='mb-0 lg:mb-4'>
+              <label htmlFor="name" className='text-[1rem] lg:text-[1.5rem]'>Your Name:</label> <br></br>
+              <input className='inputField h-[30px] lg:h-[40px] w-[250px] lg:w-[300px]' type='text' name='name' placeholder='Please enter your name here' value={form.name} onChange={handleChange} />
               </div>
-              <br></br> 
-              <div className='mb-10'>
-              <label htmlFor="email" className='text-[1.5rem]'>Your Email:</label> <br></br>
-              <input className='inputField' type='email' name='email' placeholder='Please enter your email here' value={form.email} onChange={handleChange} />
+              <div className='mb-0 lg:mb-10'>
+              <label htmlFor="email" className='text-[1rem] lg:text-[1.5rem]'>Your Email:</label> <br></br>
+              <input className='inputField h-[30px] lg:h-[40px] w-[250px] lg:w-[300px]' type='email' name='email' placeholder='Please enter your email here' value={form.email} onChange={handleChange} />
               <br></br>
               </div>
               <div>
-              <label htmlFor="message" className='text-[1.5rem]'>Message:</label> <br></br>
+              <label htmlFor="message" className='text-[1rem] lg:text-[1.5rem] '>Message:</label> <br></br>
               <textarea
               className='inputFieldMessage'
         name="message"
         value={form.message}
         onChange={handleChange}
         placeholder="Enter your message"
-        rows={isSmallScreen ? "8":"8"} 
+        rows={isSmallScreen ? "2":"8"} 
         cols={isSmallScreen ? "30":"50"} 
       />
               <br></br>
@@ -57,7 +57,7 @@ function Contact() {
           </form>
         </div>
       <div className='flex-1'>
-          <EarthCanva />
+          {/* <EarthCanva /> */}
       </div>
       </div>
       </div>
