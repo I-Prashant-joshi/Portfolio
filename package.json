@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@gsap/react": "^2.1.2",
@@ -27,6 +28,7 @@
     "react-router-dom": "^7.1.2",
     "react-scroll": "^1.9.0",
     "react-three-fiber": "^6.0.13",
+    "react-toastify": "^11.0.3",
     "react-tsparticles": "^2.12.2",
     "troika-three-utils": "^0.52.0",
     "tsparticles-slim": "^2.12.0",
