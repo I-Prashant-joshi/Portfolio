@@ -61,7 +61,7 @@ function Projects() {
         </div>
       </motion.div>
       <div className="mt-[10px] lg:mt-[100px]">
-      <Carousel responsive={responsive} swipeable={true} autoPlay={true} infinite={true} transitionDuration={5000} autoPlaySpeed={5000} >
+      <Carousel responsive={responsive} swipeable={true} autoPlay={true} infinite={true}  >
         {
             projectsData.map((item,index)=>(
                 <div key={index} className="flex flex-col lg:flex-row">

@@ -58,7 +58,7 @@ function Contact() {
   }
   return (
     <div className='h-screen flex '>
-      <div className='mt-[2rem] lg:mt-[2rem] w-full overflow-hidden' >
+      <div className='mt-[1rem] lg:mt-[2rem] w-full overflow-hidden' >
       <motion.div
         className="text-[3.5rem] lg:text-[4rem] mt-[40px] lg:mt-[60px] font-mono bg-gradient-to-br from-white to-[#a024ff] bg-clip-text text-transparent flex justify-center w-full"
         initial={{ opacity: 0, y: 50 }}
