@@ -10,8 +10,32 @@ function Computer() {
     const computerdata = useGLTF('/desktop_pc/scene.gltf');
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const size= isSmallScreen ? 0.38 : 0.67
-    const modelposition =isSmallScreen ? [1,-2,-0.5] : [1.2,-2.8,-1.5]
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+    function getSize(){
+      if(isSmallScreen){
+        return  0.38 
+      }
+      else if(isMediumScreen){
+        return 0.5
+      }
+      else{
+        return 0.67
+      }
+    }
+    function getPosition(){
+      if(isSmallScreen){
+        return  [1,-2,-0.5]
+      }
+      else if(isMediumScreen){
+        return [1,-2.8,-0.5]
+      }
+      else{
+        return [1.2,-2.8,-1.5]
+      }
+    }
+ 
+    const size= getSize()
+    const modelposition = getPosition()
     const modelRotation = isSmallScreen ?  [0,-0.3,-0.1] : [0,-0.7,-0.1] 
   return (
     <mesh>

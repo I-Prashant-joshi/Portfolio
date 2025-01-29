@@ -26,7 +26,7 @@ function Earth() {
 
 const  EarthCanva = () => {
   return (
-    <Canvas dpr={[1, 2]} frameloop="demand" shadows camera={{ }} gl={{preserveDrawingBuffer:true}} >
+    <Canvas dpr={[1, 2]} frameloop="demand" shadows  gl={{preserveDrawingBuffer:true}} >
         <ambientLight intensity={0.45} />
         <spotLight intensity={0.75} position={[-30,50,10]} angle={0.15} shadow-mapSize={1025} />
       <Suspense fallback={<CanvaLoader />}>

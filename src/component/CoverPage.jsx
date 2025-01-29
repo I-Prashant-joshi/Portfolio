@@ -26,13 +26,13 @@ function CoverPage() {
                 <div className="w-[0.2rem] h-[15rem] rounded-full bg-gradient-to-b from-[#540bfe] to-transparent"></div>
                 </div>
                 <div id='nameContent'>
-                <p className='mt-[2rem] font-marker text-2xl lg:text-5xl'>Hi I'm <span className='text-[#a024ff]'>Prashant Joshi </span> </p> 
-                <p className='mt-5 font-mono text-[0.9rem] lg:text-[1.4rem]'>I develop User Interfaces and <br/> web applications</p>
+                <p className='mt-[2rem] font-marker text-2xl md:text-4xl lg:text-5xl'>Hi I'm <span className='text-[#a024ff]'>Prashant Joshi </span> </p> 
+                <p className='mt-5 font-mono text-[0.9rem] md:text-xl lg:text-[1.4rem]'>I develop User Interfaces and <br/> web applications</p>
                 </div>
             </div>
         </div>
         <ComputerCanvas />
-        <div className=' absolute flex w-full bottom-0 justify-center items-center cursor-pointer '>
+        <div className=' absolute flex w-full bottom-10 lg:bottom-0 justify-center items-center cursor-pointer '>
             <Link to='about' smooth={true}>
                 <motion.div className='h-[54px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 ' style={{opacity}}>
                     <motion.div
