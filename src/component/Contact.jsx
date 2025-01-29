@@ -12,6 +12,8 @@ function Contact() {
    const theme = useTheme()
    const [sending,setSending]=useState(false)
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+
   const [form,setForm]=useState({
     name:"",
     email:"",
@@ -68,8 +70,8 @@ function Contact() {
       >
        Contact
       </motion.div>
-        <div className='flex flex-col lg:flex-row mt-2 lg:mt-3 h-[80%]'>
-        <motion.div className='formDiv bg-black p-[2rem] lg:p-[4rem] h-[350px] lg:h-full ml-0 lg:ml-10 '
+        <div className='flex flex-col md:flex-col lg:flex-row mt-2 lg:mt-3 h-[80%]'>
+        <motion.div className='formDiv bg-black p-[2rem] lg:p-[4rem] h-[350px] md:h-[400px] lg:h-full ml-0 lg:ml-10 '
          initial={{ opacity: 0,x:-300 }}
          whileInView={{ opacity: 1,x:0 }}
          transition={{ duration: 1.5 }}
@@ -93,7 +95,7 @@ function Contact() {
         value={form.message}
         onChange={handleChange}
         placeholder="Enter your message"
-        rows={isSmallScreen ? "2":"8"} 
+        rows={isSmallScreen ? "2" : isMediumScreen ? "3" :"8"} 
         cols={isSmallScreen ? "30":"50"} 
       />
               <br></br>
@@ -107,7 +109,7 @@ function Contact() {
        initial={{ opacity: 0,x:300 }}
        whileInView={{ opacity: 1,x:0 }}
        transition={{ duration: 1.5 }}
-       viewport={{ once: isSmallScreen ? true : false, margin: `0px 0px ${isSmallScreen?"-30%":"-50%"} 0px` }}
+       viewport={{ once: isSmallScreen ? true : false, margin: `0px 0px ${isSmallScreen?"-30%": isMediumScreen ? "20px":"-50%"} 0px` }}
       >
           <EarthCanva />
       </motion.div>

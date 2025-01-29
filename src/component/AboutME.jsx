@@ -11,6 +11,7 @@ function AboutME() {
     const theme = useTheme();
     const text = "About Me";
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
     const [expand,setExpand]=useState(isSmallScreen?false:true)
     const particlesInit = useCallback(async (engine) => {
     console.log(engine);
@@ -35,8 +36,8 @@ function AboutME() {
         init={particlesInit}
       ></Particles>
       <section className="flex flex-col lg:flex-row">
-        <motion.div className="flex-1 relative">
-          <motion.div className="w-[200px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] absolute top-[170px] left-[90px] lg:left-[80px] lg:top-[100px] rounded-full overflow-hidden"
+        <motion.div className="flex w-[50%] justify-center lg:justify-start">
+          <motion.div className="hidden lg:block  w-[200px] md:w-[300px] md:h-[300px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] mt-[100px] lg:top-[100px] ml-0 lg:ml-[100px] rounded-full overflow-hidden"
            style={{
             transform:"translate(40px,50px )",
             boxShadow: "0 0 15px 5px rgba(176, 108, 249, 0.7)", 
@@ -48,13 +49,12 @@ function AboutME() {
           transition={{duration:1.5,ease:easeInOut,}}
           viewport={{ once: isSmallScreen ? true :false, margin: "0px 0px -40% 0px" }} 
           >
-            <img src={mypic} alt="Photo" style={{marginTop:isSmallScreen ? "-50px":"-100px"}} />
+           <img src={mypic} alt="Prashant Joshi" className="w-full h-full object-cover" />
           </motion.div>
         </motion.div>
-        <motion.div className="flex-1  text-center m-auto overflow-hidden pr-[0px] lg:pr-[100px]">
-
+        <motion.div className="flex-1  text-center m-auto overflow-hidden pr-[0px] lg:pr-[50px]">
         <motion.h1
-      className="text-[3.5rem] lg:text-[4rem] mt-[50px] lg:mt-[100px] font-mono text-[#a024ff]"
+      className="text-[3.5rem] lg:text-[4rem] mt-[50px]  lg:mt-[100px] font-mono text-[#a024ff]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -75,16 +75,24 @@ function AboutME() {
         ))}
       </motion.span>
 
-      <motion.div
-        className="w-[200px] lg:w-[350px] h-1 bg-gradient-to-br from-white to-[#a024ff] shadow-2xl rounded-xl m-auto overflow-hidden"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        exit={{ scaleX: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        viewport={{ once: isSmallScreen ? true :false, margin: "0px 0px -50% 0px" }} 
-      ></motion.div>
+       <motion.div className="lg:hidden flex justify-center items-center">
+          <motion.div className="w-[200px] md:w-[300px] md:h-[300px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] rounded-full overflow-hidden mt-[40px]"
+           style={{
+            transform:"translate(40px,50px )",
+            boxShadow: "0 0 15px 5px rgba(176, 108, 249, 0.7)", 
+            transition: "box-shadow 0.3s ease-in-out" ,
+          }}
+          initial={{opacity:0,x: isSmallScreen ? -200 :-300}}
+          whileInView={{opacity:1,x:0}}
+          exit={{opacity:0}}
+          transition={{duration:1.5,ease:easeInOut,}}
+          viewport={{ once: isSmallScreen ? true :false, margin: "0px 0px -40% 0px" }} 
+          >
+           <img src={mypic} alt="Prashant Joshi" className="w-full h-full object-cover" />
+          </motion.div>
+        </motion.div>
     </motion.h1>
-          <motion.div className="text-[1rem] mt-[250px] lg:mt-[120px] font-light p-3 lg:p-8 leading-6 lg:leading-10 lg:text-[1.5rem] text-justify lg:text-normal overflow-hidden "
+          <motion.div className="text-[1rem] mt-[30px] lg:mt-[120px] font-light p-3 lg:p-8 leading-6 lg:leading-10 lg:text-[1.5rem] md:text-[1.2rem] md:leading-8 md:p-6 text-justify lg:text-normal overflow-hidden "
           initial={{opacity:0,x:200}}
           whileInView={{opacity:1,x:0}}
           exit={{opacity:0}}

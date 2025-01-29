@@ -10,7 +10,8 @@ function Earth() {
     const computerdata = useGLTF('/planet/scene.gltf');
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const size= isSmallScreen ? 2.68 : 2.67
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const size= isSmallScreen ? 2.68 : isMediumScreen ? 2.67 : 2.67
   
   return (
     <mesh>
