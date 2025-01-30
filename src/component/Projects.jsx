@@ -90,9 +90,6 @@ function Projects() {
                 className="flex gap-10 items-center mt-5 justify-center lg:justify-end w-[100%] lg:w-[90%]"
                 >
                 <div className="flex justify-center items-center text-[1rem] p-[10] border-[#a024ff] border-[2px] h-[40px] w-[100px] rounded-md select-none hover:bg-gradient-to-br from-[#a024ff] to-[#d3abf2] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-                    Images
-                </div>
-                <div className="flex justify-center items-center text-[1rem] p-[10] border-[#a024ff] border-[2px] h-[40px] w-[100px] rounded-md select-none hover:bg-gradient-to-br from-[#a024ff] to-[#d3abf2] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                     <a href={item.link} target="blank"> Live </a>
                 </div>
                 </motion.div>

@@ -1,3 +1,6 @@
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import DescriptionIcon from "@mui/icons-material/Description";
+import resume from '/Resume.pdf'
 export const navData=[
     {
         name:"About",
@@ -6,17 +9,26 @@ export const navData=[
     },
     {
         name:"Projects",
-        key:0,
+        key:1,
         linkname:"projects"
     },
     {
         name:"Contact",
-        key:1,
+        key:2,
         linkname:"contact"
     },
-    {
-        name:"Resume",
-        key:3,
-    },
+ 
 ]
-    
+   export const navIcon=[
+        {
+            icon:DescriptionIcon,
+            key:1,
+            linkname:resume,
+            Download:"Resume"
+        },
+        {
+            icon:LinkedInIcon,
+            key:2,
+            linkname:"https://www.linkedin.com/in/prashant-joshi09/"
+        },
+    ]

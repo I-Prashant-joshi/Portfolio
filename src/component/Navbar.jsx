@@ -1,6 +1,6 @@
 import {  useState } from 'react';
 import logo from '../../src/assets/PLogo.png';
-import { navData } from '../constant/const';
+import { navData, navIcon } from '../constant/const';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
@@ -10,6 +10,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
+import { Tooltip } from '@mui/material';
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false); 
   const toggleDrawer = (open) => (event) => {
@@ -53,6 +54,20 @@ function Navbar() {
             {item.name}
           </Link>
         ))}
+        <div className='flex items-center gap-10'>
+        {
+          navIcon?.map((item)=>(
+            <Tooltip key={item.key}>
+            <a href={item.linkname} download={item.Download}>
+              <item.icon style={{fontSize:"2rem",
+              backgroundColor: "blue",
+              borderRadius: "10px",
+            }} />
+            </a>
+            </Tooltip>
+          ))
+        }
+        </div>
       </div>
       </div>
       <div className='flex gap-4'>
