@@ -39,7 +39,7 @@ function CoverPage() {
         </div>
         <ComputerCanvas />
         <div className=" absolute flex w-full bottom-10 lg:bottom-0 justify-center items-center cursor-pointer ">
-          <Link to="about" smooth={true}>
+          <a href="#about" >
             <motion.div
               className="h-[54px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 "
               style={{ opacity }}
@@ -55,7 +55,7 @@ function CoverPage() {
                 className="w-3 h-3 rounded-full bg-slate-300 mb-5"
               />
             </motion.div>
-          </Link>
+          </a>
         </div>
       </section>
     </motion.div>

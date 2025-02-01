@@ -1,10 +1,9 @@
-import { useCallback, useState } from 'react'
+import { useCallback} from 'react'
 import './App.css'
 import {BrowserRouter} from 'react-router-dom'
 import Navbar from './component/Navbar'
 import CoverPage from './component/CoverPage'
-import AboutME from './component/AboutME'
-import { motion, useScroll, useTransform } from 'framer-motion';
+import AboutMe from './component/AboutME'
 import Projects from './component/Projects'
 import Contact from './component/Contact'
 import Particles from "react-tsparticles";
@@ -37,7 +36,7 @@ function App() {
         <div className="mainDiv" >
           <Navbar />
           <CoverPage />
-          <AboutME />
+          <AboutMe />
           <Projects />
           <Contact />
   </div> 

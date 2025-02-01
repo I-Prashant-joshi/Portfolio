@@ -1,8 +1,11 @@
 
 .mainDiv{
-position: relative;
-height: 100%;
-width: 100%;
+/* position: relative; */
+height: 100vh;
+width: 100vw;
+overflow-x: hidden;
+scroll-behavior: smooth;
+scroll-snap-type: y mandatory;
 }
 
 html {
@@ -12,6 +15,8 @@ html {
   padding: 0;
   height: 100%;
   overflow-x: hidden; /* Keep here */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -20,7 +25,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden; /* Keep here */
+  scroll-behavior: smooth;
+
 }
+
 .coverPage{
   background-image: url('./assets/herobg.png');
   background-repeat: no-repeat;

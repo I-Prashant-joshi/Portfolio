@@ -48,11 +48,11 @@ function Navbar() {
       </div>
       <div className="hidden lg:flex gap-10 ml-10">
         {navData?.map((item) => (
-          <Link key={item.key} to={item.linkname} smooth={true} duration={500}
+          <a key={item.key} href={`#${item.linkname}`} 
           className="font-bold lg:font-serif cursor-pointer text-[1.4rem] pt-2 text-[white]"
            >
             {item.name}
-          </Link>
+          </a>
         ))}
         <div className='flex items-center gap-10'>
         {
