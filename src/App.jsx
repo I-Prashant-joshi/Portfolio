@@ -1,14 +1,15 @@
-import { useCallback} from 'react'
+import { lazy, Suspense, useCallback} from 'react'
 import './App.css'
 import {BrowserRouter} from 'react-router-dom'
-import Navbar from './component/Navbar'
-import CoverPage from './component/CoverPage'
-import AboutMe from './component/AboutME'
-import Project from './component/Projects'
-import ContactPage from './component/Contact'
 import Particles from "react-tsparticles";
 import partcleConfig from "./component/AboutmeConfig";
 import { loadSlim } from "tsparticles-slim";
+import Loader from './component/Common/Loader';
+const Navbar = lazy(() => import('./component/Navbar'));
+const CoverPage = lazy(() => import('./component/CoverPage'));
+const AboutMe = lazy(() => import('./component/AboutME'));
+const Project = lazy(() => import('./component/Projects'));
+const ContactPage = lazy(() => import('./component/Contact'));
 function App() {
     const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
@@ -32,11 +33,13 @@ function App() {
       ></Particles>
 
         <div className="mainDiv" >
+        <Suspense fallback={<Loader />}>
           <Navbar />
           <CoverPage />
           <AboutMe />
           <Project />
           <ContactPage />
+          </Suspense>
   </div> 
     </BrowserRouter>
   )

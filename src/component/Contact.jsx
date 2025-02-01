@@ -52,15 +52,15 @@ function Contact() {
     transition: { duration: 1.5 },
     viewport: {
       once: isSmallScreen,
-      margin: `0px 0px ${isSmallScreen ? '-30%' : '-50%'} 0px`,
+      margin: `0px 0px ${isSmallScreen ? '-20%' : '-50%'} 0px`,
     },
   });
 
   return (
     <div className="h-screen flex">
-      <div className="mt-4 lg:mt-8 w-full overflow-hidden">
+      <div className="mt-1 lg:mt-8 w-full overflow-hidden">
         <motion.h1
-          className="text-[4rem] lg:text-5xl mt-10 lg:mt-16 font-mono bg-gradient-to-br from-white to-purple-700 bg-clip-text text-transparent text-center"
+          className="text-[2.5rem] lg:text-5xl mt-10 lg:mt-16 font-mono bg-gradient-to-br from-white to-purple-700 bg-clip-text text-transparent text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -69,20 +69,20 @@ function Contact() {
           Contact
         </motion.h1>
 
-        <div className="flex flex-col lg:flex-row mt-0 lg:mt-3 h-[80%]">
+        <div className="flex flex-col lg:flex-row mt-2 lg:mt-3 max-h-[80%]">
           <motion.div
-            className="formDiv p-4 lg:p-8 h-96 md:h-[400px] lg:h-full ml-0 lg:ml-10"
+            className="formDiv p-4 lg:p-8  ml-0 lg:ml-10"
             {...motionProps(-300)}
           >
-            <form onSubmit={submitMail} className="space-y-4">
+            <form onSubmit={submitMail} className="space-y-1 lg:space-y-4">
               {['name', 'email', 'message'].map((field) => (
                 <div key={field}>
-                  <label htmlFor={field} className="text-lg lg:text-xl">
+                  <label htmlFor={field} className="text-lg lg:text-xl inline-block lg:block mr-3 ">
                     {`Your ${field.charAt(0).toUpperCase() + field.slice(1)}:`}
                   </label>
                   {field !== 'message' ? (
                     <input
-                      className="inputField h-8 lg:h-10 w-64 lg:w-72"
+                      className="inputField h-8 lg:h-10 w-[200px] lg:w-72"
                       type={field === 'email' ? 'email' : 'text'}
                       name={field}
                       placeholder={`Enter your ${field}`}
@@ -115,7 +115,7 @@ function Contact() {
             </form>
           </motion.div>
 
-          <motion.div className="flex-1" {...motionProps(300)}>
+          <motion.div className="flex-1" {...motionProps(200)}>
             <EarthCanva />
           </motion.div>
         </div>

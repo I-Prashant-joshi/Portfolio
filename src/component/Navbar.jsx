@@ -1,82 +1,57 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 import logo from '../../src/assets/PLogo.png';
 import { navData, navIcon } from '../constant/const';
-import Box from '@mui/material/Box';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import { Box, SwipeableDrawer, List, ListItem, ListItemButton, ListItemText, Tooltip } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
-import { Tooltip } from '@mui/material';
+
 function Navbar() {
-  const [drawerOpen, setDrawerOpen] = useState(false); 
-  const toggleDrawer = (open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return; 
-    }
-    setDrawerOpen(open);
-  };
-
-
-  const list = () => (
-    <Box sx={{ width: 150,height:"100%",backgroundColor:"black" }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-      <List>
-        {navData.map((text) => (
-          <Link key={text.key} to={text.linkname} smooth={true} duration={500}>
-          <ListItem  disablePadding>
-            <ListItemButton  style={{color:'#9d07f5',fontWeight:"bold",
-          }}>
-              <ListItemText primary={text.name} className='ml-3 '/>
-            </ListItemButton>
-          </ListItem>
-          </Link>
-        ))}
-      </List>
-      <Divider />
-    
-    </Box>
-  );
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const toggleDrawer = (open) => () => setDrawerOpen(open);
 
   return (
-    <header className="fixed lg:pl-20 lg:pr-20 bg-[#52525365] w-full h-12 flex items-center justify-between select-none z-50 lg:h-16 md:h-12">
-      <div className='flex items-center justify-between w-full'>
-      <div className="h-full w-[7rem] flex items-center">
-        <img src={logo} alt="Logo" className="w-[2.3rem] ml-5 lg:ml-0 lg:w-[3rem]" />
-      </div>
-      <div className="hidden lg:flex gap-10 ml-10">
-        {navData?.map((item) => (
-          <a key={item.key} href={`#${item.linkname}`} 
-          className="font-bold lg:font-serif cursor-pointer text-[1.4rem] pt-2 text-[white]"
-           >
-            {item.name}
+    <header className="fixed lg:px-20 bg-[#52525365] w-full h-12 flex items-center justify-between select-none z-50 lg:h-16">
+      <img src={logo} alt="Logo" className="w-9 ml-5 lg:ml-0 lg:w-12" />
+      <nav className="hidden lg:flex gap-10 items-center">
+        {navData.map(({ key, linkname, name }) => (
+          <a key={key} href={`#${linkname}`} className="font-bold cursor-pointer text-xl text-white">
+            {name}
           </a>
         ))}
-        <div className='flex items-center gap-10'>
-        {
-          navIcon?.map((item)=>(
-            <Tooltip key={item.key}>
-            <a href={item.linkname} download={item.Download}>
-              <item.icon style={{fontSize:"2rem",
-              backgroundColor: "blue",
-              borderRadius: "10px",
-            }} />
+        {navIcon.map(({ key, linkname, Download, icon: Icon }) => (
+          <Tooltip key={key} title={name} arrow>
+            <a href={linkname} download={Download}>
+              <Icon className="text-[2rem] bg-blue-500 rounded-lg p-1" />
             </a>
-            </Tooltip>
-          ))
-        }
-        </div>
-      </div>
-      </div>
-      <div className='flex gap-4'>
-      <div className="lg:hidden md:flex text-white w-10 cursor-pointer mt-2">
-         <MenuIcon onClick={toggleDrawer(true)} />
+          </Tooltip>
+        ))}
+      </nav>
+
+      <div className="flex gap-5 lg:hidden text-white cursor-pointer">
+      {navIcon.map(({ key, linkname, Download, icon: Icon }) => (
+          <Tooltip key={key} title={name} arrow>
+            <a href={linkname} download={Download}>
+              <Icon className="text-[2rem] bg-blue-500 rounded-lg p-1" />
+            </a>
+          </Tooltip>
+        ))}
+     
+        <MenuIcon onClick={toggleDrawer(true)} />
         <SwipeableDrawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
-          {list()}
+          <Box sx={{ width: 150, height: '100%', bgcolor: 'black',color:"white" }} onClick={toggleDrawer(false)}>
+            <List>
+              {navData.map(({ key, linkname, name }) => (
+                <Link key={key} to={linkname} smooth duration={500}>
+                  <ListItem disablePadding>
+                    <ListItemButton className="text-purple-500 font-bold">
+                      <ListItemText primary={name} />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+              ))}
+            </List>
+          </Box>
         </SwipeableDrawer>
-      </div>
       </div>
     </header>
   );

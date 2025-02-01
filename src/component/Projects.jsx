@@ -8,13 +8,13 @@ import MotionWrapper from "./Common/MotionWrapper";
 import PropTypes from "prop-types"; 
 
 
-const ProjectItem = ({ item }) => (
+const ProjectItem = ({ item, onceData }) => (
   <div className="flex flex-col lg:flex-row">
-    <MotionWrapper className="flex h-full w-full lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
+    <MotionWrapper onceData={onceData} className="flex h-full w-full lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
       <img src={item.source} alt="Project" className="h-[200px] lg:h-[500px] rounded-2xl" />
     </MotionWrapper>
     
-    <MotionWrapper className="flex-1 mt-[10px] lg:mt-[50px]">
+    <MotionWrapper onceData={onceData} className="flex-1 mt-[10px] lg:mt-[50px]">
       <p className="text-center text-[2rem] lg:text-[3rem]">{item.projectName}</p>
       <p className="text-[0.8rem] lg:text-[1.5rem] text-justify p-2 lg:p-0 lg:pr-[50px] mt-0 lg:mt-[20px]">
         {item.description}
@@ -35,7 +35,7 @@ const ProjectItem = ({ item }) => (
 function Projects() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
+  const onceData=isSmallScreen ? true : false;
   const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 1 },
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
@@ -46,7 +46,7 @@ function Projects() {
   return (
     <div className="w-full flex flex-col">
       <motion.div
-        className="text-[3.5rem] lg:text-[4rem] mt-[40px] lg:mt-[60px] font-mono bg-gradient-to-br from-white to-[#a024ff] bg-clip-text text-transparent flex justify-center"
+        className="text-[2.5rem] lg:text-[4rem] mt-[40px] lg:mt-[60px] font-mono bg-gradient-to-br from-white to-[#a024ff] bg-clip-text text-transparent flex justify-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -60,7 +60,7 @@ function Projects() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, margin: `0px 0px ${isSmallScreen ? "-30%" : "-60%"} 0px` }}
+        viewport={{ once:onceData, margin: `0px 0px ${isSmallScreen ? "-30%" : "-60%"} 0px` }}
       >
         <div className="text-[1rem] lg:text-[1.03rem] mt-[5px] lg:mt-[10px] lg:ml-[100px] font-mono bg-gradient-to-br from-white to-[#9e9d9f] bg-clip-text text-transparent flex justify-center w-[100%] lg:w-[70%]">
           {isSmallScreen ? "Welcome to my front-end projects showcase!" : 
@@ -72,7 +72,7 @@ function Projects() {
       <div className="mt-[10px] lg:mt-[100px]">
         <Carousel responsive={responsive} swipeable={true} autoPlay={true} infinite={true}>
           {projectsData.map((item, index) => (
-            <ProjectItem key={index} item={item} />
+            <ProjectItem key={index} item={item} onceData={onceData} />
           ))}
         </Carousel>
       </div>

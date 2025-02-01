@@ -9,8 +9,8 @@ function AboutME() {
   const text = "About Me";
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const [expand, setExpand] = useState(!isSmallScreen);
-
-  return (
+  const onceData=isSmallScreen ? true : false;
+    return (
     <div>
       <section className="flex flex-col lg:flex-row">
         {/* Left section - Image */}
@@ -39,9 +39,9 @@ function AboutME() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: false, margin: "0px 0px -50% 0px" }}
+          viewport={{ once: onceData, margin: "0px 0px -50% 0px" }}
         >
-          <motion.h1 className="text-[3.5rem] lg:text-[4rem] mt-[50px] lg:mt-[100px] font-mono text-[#a024ff]">
+          <motion.h1 className="text-[2.5rem] lg:text-[4rem] mt-[10px] lg:mt-[100px] font-mono text-[#a024ff]">
             <motion.span className="text-[white]">
               {text.split("").map((char, index) => (
                 <motion.span
@@ -59,7 +59,7 @@ function AboutME() {
           </motion.h1>
 
           {/* Mobile Image */}
-          <motion.div className="lg:hidden flex justify-center items-center mt-[40px]">
+          <motion.div className="lg:hidden flex justify-center items-center mt-[10px]">
             <div className="w-[200px] md:w-[300px] md:h-[300px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] rounded-full overflow-hidden">
               <img src={mypic} alt="Prashant Joshi" className="w-full h-full object-cover" />
             </div>
@@ -67,12 +67,12 @@ function AboutME() {
 
           {/* Description and "Read more" toggle */}
           <motion.div
-            className="text-[1rem] mt-[30px] lg:mt-[120px] font-light p-3 lg:p-8 leading-6 lg:leading-10 lg:text-[1.5rem] md:text-[1.2rem] md:leading-8 md:p-6 text-justify lg:text-normal"
+            className="text-[1rem] mt-[20px] lg:mt-[120px] font-light p-3 lg:p-8 leading-6 lg:leading-10 lg:text-[1.5rem] md:text-[1.2rem] md:leading-8 md:p-6 text-justify lg:text-normal"
             initial={{ opacity: 0, x: 200 }}
             whileInView={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: easeInOut }}
-            viewport={{ once: isSmallScreen ? true : false, margin: `0px 0px -40% 0px` }}
+            viewport={{ once: onceData, margin: `0px 0px -40% 0px` }}
           >
             <div>
               Hi there! I’m <span className="text-[#a024ff] text-[1.2rem] lg:text-[1.7rem]">Prashant Joshi</span>, a passionate{" "}
