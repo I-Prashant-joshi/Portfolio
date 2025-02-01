@@ -29,7 +29,7 @@ function AboutME() {
               transition: "box-shadow 0.3s ease-in-out",
             }}
           >
-            <img src={mypic} alt="Prashant Joshi" className="w-full h-full object-cover" />
+            <img src={mypic} alt="Prashant Joshi"  loading="lazy" className="w-full h-full object-cover" />
           </div>
         </motion.div>
 
@@ -61,7 +61,7 @@ function AboutME() {
           {/* Mobile Image */}
           <motion.div className="lg:hidden flex justify-center items-center mt-[10px]">
             <div className="w-[200px] md:w-[300px] md:h-[300px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] rounded-full overflow-hidden">
-              <img src={mypic} alt="Prashant Joshi" className="w-full h-full object-cover" />
+              <img src={mypic} alt="Prashant Joshi" loading="lazy"  className="w-full h-full object-cover" />
             </div>
           </motion.div>
 

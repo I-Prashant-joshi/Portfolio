@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <header className="fixed lg:px-20 bg-[#52525365] w-full h-12 flex items-center justify-between select-none z-50 lg:h-16">
-      <img src={logo} alt="Logo" className="w-9 ml-5 lg:ml-0 lg:w-12" />
+      <img src={logo} alt="Logo" loading="lazy"  className="w-9 ml-5 lg:ml-0 lg:w-12" />
       <nav className="hidden lg:flex gap-10 items-center">
         {navData.map(({ key, linkname, name }) => (
           <a key={key} href={`#${linkname}`} className="font-bold cursor-pointer text-xl text-white">

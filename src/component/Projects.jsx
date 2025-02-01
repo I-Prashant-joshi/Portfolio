@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 const ProjectItem = ({ item, onceData }) => (
   <div className="flex flex-col lg:flex-row">
     <MotionWrapper onceData={onceData} className="flex h-full w-full lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
-      <img src={item.source} alt="Project" className="h-[200px] lg:h-[500px] rounded-2xl" />
+      <img src={item.source} alt="Project" loading="lazy"  className="h-[200px] lg:h-[500px] rounded-2xl" />
     </MotionWrapper>
     
     <MotionWrapper onceData={onceData} className="flex-1 mt-[10px] lg:mt-[50px]">

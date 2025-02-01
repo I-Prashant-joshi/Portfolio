@@ -2,61 +2,58 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ComputerCanvas from "./Computer";
 import { motion, useTransform, useScroll } from "framer-motion";
-import { Link } from "react-scroll";
 
 function CoverPage() {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [100, 600], [1, 0]);
+
   useGSAP(() => {
-    gsap.from("#nameContent p", {
+    const tl = gsap.timeline();
+    tl.from("#nameContent p", {
       x: 150,
       delay: 1.5,
       opacity: 0,
       duration: 1,
       stagger: 0.5,
     });
-   
+    return () => tl.kill(); // Clean up the animation
   }, []);
 
   return (
     <motion.div className="coverPage" style={{ opacity, height: "100vh" }}>
-      <section className="relative w-full  h-full">
-        <div className="absolute top-[90px] lg:top-[120px] flex flex-row items-start max-w-7xl ml-[2rem] lg:ml-[10rem] gap-5">
-          <div className="flex flex-row justify-center gap-5 w-full ">
-            <div className="flex flex-col justify-center items-center">
-              <div className="w-[1rem] h-[1rem] rounded-full bg-[#540bfe]"></div>
-              <div className="w-[0.2rem] h-[15rem] rounded-full bg-gradient-to-b from-[#540bfe] to-transparent"></div>
+      <section className="relative w-full h-full">
+        <div className="absolute top-[90px] lg:top-[120px] flex items-start max-w-7xl ml-8 lg:ml-40 gap-5">
+          <div className="flex justify-center gap-5 w-full">
+            <div className="flex flex-col items-center">
+              <div className="w-4 h-4 rounded-full bg-[#540bfe]"></div>
+              <div className="w-1 h-60 bg-gradient-to-b from-[#540bfe] to-transparent"></div>
             </div>
             <div id="nameContent">
-              <p className="mt-[2rem] font-marker text-2xl md:text-4xl lg:text-5xl">
-                Hi I'm <span className="text-[#a024ff]">Prashant Joshi </span>{" "}
+              <p className="mt-8 font-marker text-2xl md:text-4xl lg:text-5xl">
+                Hi, I'm <span className="text-[#a024ff]">Prashant Joshi</span>
               </p>
-              <p className="mt-5 font-mono text-[0.9rem] md:text-xl lg:text-[1.4rem]">
-                I develop User Interfaces and <br /> web applications
+              <p className="mt-5 font-mono text-sm md:text-xl lg:text-2xl">
+                I develop User Interfaces and web applications
               </p>
             </div>
           </div>
         </div>
+
         <ComputerCanvas />
-        <div className="absolute flex w-full bottom-10 lg:bottom-0 justify-center items-center cursor-pointer ">
-          <a href="#about" >
-            <motion.div
-              className="h-[54px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 "
-              style={{ opacity }}
-            >
-              <motion.div
-                initial={{ y: 0, opacity: 1 }}
-                animate={{ y: 20, opacity: 0.3 }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-                className="w-3 h-3 rounded-full bg-slate-300 mb-5"
-              />
-            </motion.div>
-          </a>
-        </div>
+
+        <motion.a
+          href="#about"
+          className="absolute bottom-10 lg:bottom-0 w-full flex justify-center cursor-pointer"
+          style={{ opacity }}
+        >
+          <motion.div
+            className="h-14 w-9 rounded-3xl border-2 border-white flex justify-center items-center p-2"
+            animate={{ y: [0, 20, 0], opacity: [1, 0.3, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <div className="w-3 h-3 rounded-full bg-slate-300" />
+          </motion.div>
+        </motion.a>
       </section>
     </motion.div>
   );
