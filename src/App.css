@@ -1,18 +1,25 @@
 
 .mainDiv{
-  position: relative;
-  z-index: 0;
-  color: white;
+position: relative;
+height: 100%;
+width: 100%;
+}
+
+html {
+  user-select: none;
+  color: azure;
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
-
+  overflow-x: hidden; /* Keep here */
 }
-body{
+
+body {
   background-color: rgb(44, 43, 43);
-  user-select: "none";
-  
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 .coverPage{
   background-image: url('./assets/herobg.png');

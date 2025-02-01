@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import './App.css'
 import {BrowserRouter} from 'react-router-dom'
 import Navbar from './component/Navbar'
@@ -7,12 +7,34 @@ import AboutME from './component/AboutME'
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Projects from './component/Projects'
 import Contact from './component/Contact'
-
+import Particles from "react-tsparticles";
+import partcleConfig from "./component/AboutmeConfig";
+import { loadSlim } from "tsparticles-slim";
 function App() {
+    const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
 
+    await loadSlim(engine);
+  }, []);
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
   return (
     <BrowserRouter>
-  <div className="mainDiv" >
+        <Particles
+        loaded={particlesLoaded}
+        id="tsparticles"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+        }}
+        options={partcleConfig}
+        init={particlesInit}
+      ></Particles>
+
+        <div className="mainDiv" >
           <Navbar />
           <CoverPage />
           <AboutME />

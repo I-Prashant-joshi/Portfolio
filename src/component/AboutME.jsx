@@ -1,7 +1,4 @@
-import  { useCallback, useState } from "react";
-import Particles from "react-tsparticles";
-import partcleConfig from "./AboutmeConfig";
-import { loadSlim } from "tsparticles-slim";
+import  { useState } from "react";
 import { easeInOut, motion} from "framer-motion";
 import mypic from "../assets/myPic.jpg";
 import { useMediaQuery, useTheme } from "@mui/material";
@@ -11,30 +8,10 @@ function AboutME() {
     const theme = useTheme();
     const text = "About Me";
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
     const [expand,setExpand]=useState(isSmallScreen?false:true)
-    const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
 
-    await loadSlim(engine);
-  }, []);
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
   return (
     <div >
-      <Particles
-        loaded={particlesLoaded}
-        id="tsparticles"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-        }}
-        options={partcleConfig}
-        init={particlesInit}
-      ></Particles>
       <section className="flex flex-col lg:flex-row">
         <motion.div className="flex w-[50%] justify-center lg:justify-start">
           <motion.div className="hidden lg:block  w-[200px] md:w-[300px] md:h-[300px] lg:w-[450px] opacity-[0.7] h-[200px] lg:h-[450px] mt-[100px] lg:top-[100px] ml-0 lg:ml-[100px] rounded-full overflow-hidden"
