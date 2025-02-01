@@ -4,15 +4,13 @@ import {BrowserRouter} from 'react-router-dom'
 import Navbar from './component/Navbar'
 import CoverPage from './component/CoverPage'
 import AboutMe from './component/AboutME'
-import Projects from './component/Projects'
-import Contact from './component/Contact'
+import Project from './component/Projects'
+import ContactPage from './component/Contact'
 import Particles from "react-tsparticles";
 import partcleConfig from "./component/AboutmeConfig";
 import { loadSlim } from "tsparticles-slim";
 function App() {
     const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
-
     await loadSlim(engine);
   }, []);
   const particlesLoaded = useCallback(async (container) => {
@@ -37,8 +35,8 @@ function App() {
           <Navbar />
           <CoverPage />
           <AboutMe />
-          <Projects />
-          <Contact />
+          <Project />
+          <ContactPage />
   </div> 
     </BrowserRouter>
   )

@@ -38,7 +38,7 @@ function CoverPage() {
           </div>
         </div>
         <ComputerCanvas />
-        <div className=" absolute flex w-full bottom-10 lg:bottom-0 justify-center items-center cursor-pointer ">
+        <div className="absolute flex w-full bottom-10 lg:bottom-0 justify-center items-center cursor-pointer ">
           <a href="#about" >
             <motion.div
               className="h-[54px] w-[35px] rounded-3xl border-[2px] border-white flex justify-center items-center p-2 "
