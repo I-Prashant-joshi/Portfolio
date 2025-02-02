@@ -60,7 +60,7 @@ function Contact() {
     <div className="h-screen flex">
       <div className="mt-1 lg:mt-8 w-full overflow-hidden">
         <motion.h1
-          className="text-[2.5rem] lg:text-5xl mt-10 lg:mt-16 font-mono bg-gradient-to-br from-white to-purple-700 bg-clip-text text-transparent text-center"
+          className="text-[2.5rem] lg:text-[4rem] mt-10 lg:mt-16 font-mono bg-gradient-to-br from-white to-purple-700 bg-clip-text text-transparent text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

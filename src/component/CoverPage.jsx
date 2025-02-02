@@ -1,12 +1,9 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ComputerCanvas from "./Computer";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 function CoverPage() {
-  const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [100, 600], [1, 0]);
-
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from("#nameContent p", {
@@ -20,7 +17,7 @@ function CoverPage() {
   }, []);
 
   return (
-    <motion.div className="coverPage" style={{ opacity, height: "100vh" }}>
+    <motion.div className="coverPage" style={{ height: "100vh" }}>
       <section className="relative w-full h-full">
         <div className="absolute top-[90px] lg:top-[120px] flex items-start max-w-7xl ml-8 lg:ml-40 gap-5">
           <div className="flex justify-center gap-5 w-full">
@@ -38,13 +35,10 @@ function CoverPage() {
             </div>
           </div>
         </div>
-
         <ComputerCanvas />
-
         <motion.a
           href="#about"
           className="absolute bottom-10 lg:bottom-0 w-full flex justify-center cursor-pointer"
-          style={{ opacity }}
         >
           <motion.div
             className="h-14 w-9 rounded-3xl border-2 border-white flex justify-center items-center p-2"
