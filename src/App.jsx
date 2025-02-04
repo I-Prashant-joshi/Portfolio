@@ -5,11 +5,16 @@ import Particles from "react-tsparticles";
 import partcleConfig from "./component/AboutmeConfig";
 import { loadSlim } from "tsparticles-slim";
 import Loader from './component/Common/Loader';
-const Navbar = lazy(() => import('./component/Navbar'));
-const CoverPage = lazy(() => import('./component/CoverPage'));
-const AboutMe = lazy(() => import('./component/AboutME'));
-const Project = lazy(() => import('./component/Projects'));
-const ContactPage = lazy(() => import('./component/Contact'));
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const withDelay = (importFunc, delayTime = 2000) => {
+  return lazy(() => delay(delayTime).then(importFunc));
+};
+const Navbar = withDelay(() => import('./component/Navbar'));
+const CoverPage = withDelay(() => import('./component/CoverPage'));
+const AboutMe = withDelay(() => import('./component/AboutME'));
+const Project = withDelay(() => import('./component/Projects'));
+const ContactPage = withDelay(() => import('./component/Contact'));
 function App() {
     const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
