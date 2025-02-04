@@ -17,7 +17,7 @@ function CoverPage() {
   }, []);
 
   return (
-    <motion.div className="coverPage" style={{ height: "100vh" }}>
+    <motion.div className="coverPage  h-screen">
       <section className="relative w-full h-full">
         <div className="absolute top-[90px] lg:top-[120px] flex items-start max-w-7xl ml-8 lg:ml-40 gap-5">
           <div className="flex justify-center gap-5 w-full">
