@@ -9,12 +9,12 @@ import PropTypes from "prop-types";
 
 
 const ProjectItem = ({ item, onceData }) => (
-  <div className="flex flex-col lg:flex-row">
-    <MotionWrapper onceData={onceData} className="flex h-full w-full lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
+  <MotionWrapper  onceData={onceData} className="flex flex-col lg:flex-row">
+    <div className="flex h-full w-full lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
       <img src={item.source} alt="Project" loading="lazy"  className="h-[200px] lg:h-[500px] rounded-2xl" />
-    </MotionWrapper>
+    </div>
     
-    <MotionWrapper onceData={onceData} className="flex-1 mt-[10px] lg:mt-[50px]">
+    <div className="flex-1 mt-[10px] lg:mt-[50px]">
       <p className="text-center text-[2rem] lg:text-[3rem]">{item.projectName}</p>
       <p className="text-[0.8rem] lg:text-[1.5rem] text-justify p-2 lg:p-0 lg:pr-[50px] mt-0 lg:mt-[20px]">
         {item.description}
@@ -28,8 +28,8 @@ const ProjectItem = ({ item, onceData }) => (
           <a href={item.link} target="_blank" rel="noopener noreferrer">Live</a>
         </div>
       </div>
-    </MotionWrapper>
-  </div>
+    </div>
+  </MotionWrapper>
 );
 
 function Projects() {
