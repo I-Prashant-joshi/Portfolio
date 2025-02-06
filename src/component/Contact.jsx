@@ -52,7 +52,7 @@ function Contact() {
     transition: { duration: 1.5 },
     viewport: {
       once: isSmallScreen,
-      margin: `0px 0px ${isSmallScreen ? '-20%' : '-50%'} 0px`,
+      margin: `0px 0px ${isSmallScreen ? '-20%' : '-30%'} 0px`,
     },
   });
 
@@ -69,12 +69,13 @@ function Contact() {
           Contact
         </motion.h1>
 
-        <div className="flex flex-col lg:flex-row mt-2 lg:mt-3 max-h-[80%]">
+        <div className="flex flex-col lg:flex-row mt-2 lg:mt-3 h-full">
+          <div className='flex-1'>
           <motion.div
-            className="formDiv p-4 lg:p-8  ml-0 lg:ml-10"
+            className="formDiv p-4 lg:p-8  ml-0 lg:ml-10 " 
             {...motionProps(-300)}
           >
-            <form onSubmit={submitMail} className="space-y-1 lg:space-y-4">
+            <form onSubmit={submitMail} className="space-y-1 lg:space-y-8">
               {['name', 'email', 'message'].map((field) => (
                 <div key={field}>
                   <label htmlFor={field} className="text-lg lg:text-xl inline-block lg:block mr-3 ">
@@ -114,8 +115,8 @@ function Contact() {
               </button>
             </form>
           </motion.div>
-
-          <motion.div className="flex-1" {...motionProps(200)}>
+          </div>
+          <motion.div className=" flex-1" {...motionProps(200)}>
             <EarthCanva />
           </motion.div>
         </div>

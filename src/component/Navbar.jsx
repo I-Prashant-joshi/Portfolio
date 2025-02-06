@@ -40,14 +40,14 @@ function Navbar() {
         <SwipeableDrawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
           <Box sx={{ width: 150, height: '100%', bgcolor: 'black',color:"white" }} onClick={toggleDrawer(false)}>
             <List>
-              {navData.map(({ key, linkname, name }) => (
-                <Link key={key} to={linkname} smooth duration={500}>
+              {navData.map(({key, linkname, name}) => (
+                <a key={key} href={`#${linkname}`}  >
                   <ListItem disablePadding>
                     <ListItemButton className="text-purple-500 font-bold">
                       <ListItemText primary={name} />
                     </ListItemButton>
                   </ListItem>
-                </Link>
+              </a>
               ))}
             </List>
           </Box>

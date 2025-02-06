@@ -54,7 +54,6 @@ function Projects() {
       >
         Projects
       </motion.div>
-
       <motion.div
         className="flex justify-center text-center"
         initial={{ opacity: 0, y: 60 }}

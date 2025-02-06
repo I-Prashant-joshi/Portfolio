@@ -1,5 +1,5 @@
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import CanvaLoader from './CanvaLoader'; 
 import { useMediaQuery } from '@mui/material';
@@ -7,18 +7,30 @@ import { useTheme } from '@mui/material/styles';
 
 
 function Earth() {
+  const [size,setSize]=useState(2.07)
+  const [position,setPosition]=useState(0.3)
     const computerdata = useGLTF('/planet/scene.gltf');
     const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
-    const size= isSmallScreen ? 2.68 : isMediumScreen ? 2.67 : 2.67
+    var isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    var isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+    useEffect(()=>{
+      console.log("called ==>");
+      if(isSmallScreen){
+        setSize(2)
+        setPosition(1)
+      }
+      if(isMediumScreen){
+        setSize(2)
+        setPosition(1.5)
+      }
+    },[isMediumScreen,isSmallScreen])
   
   return (
     <mesh>
         <hemisphereLight intensity={0.15} groundColor={"black"} />
       <primitive object={computerdata.scene}
       scale={size}
-      position-y={-0.2}
+      position-y={position}
       rotation-y={0}
        />
     </mesh>
