@@ -38,7 +38,7 @@ function CoverPage() {
         <ComputerCanvas />
         <motion.a
           href="#about"
-          className="absolute bottom-0  lg:bottom-0 w-full h-[12rem] lg:h-[8rem] flex justify-center cursor-pointer"
+          className="absolute bottom-0  lg:bottom-0 w-full h-[12rem] md:h-[8rem] lg:h-[8rem] flex justify-center cursor-pointer"
         >
           <motion.div
             className="h-14 w-9 rounded-3xl border-2 border-white flex justify-center items-center p-2"
