@@ -67,7 +67,7 @@ function AboutME() {
 
           {/* Description and "Read more" toggle */}
           <motion.div
-            className="text-[1rem] mt-[20px] lg:mt-[120px] font-light p-3 lg:p-8 leading-6 lg:leading-10 lg:text-[1.5rem] md:text-[1.2rem] md:leading-8 md:p-6 text-justify lg:text-normal"
+            className="text-[1rem] mt-[20px] lg:mt-[120px] xl:mt-[5px] font-light p-3 lg:p-8 leading-6 lg:leading-10 lg:text-[1.5rem] md:text-[1.2rem] md:leading-8 md:p-6 text-justify lg:text-normal xl:text-[1.7rem]"
             initial={{ opacity: 0, x: 200 }}
             whileInView={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0 }}
@@ -75,8 +75,8 @@ function AboutME() {
             viewport={{ once: onceData, margin: `0px 0px -40% 0px` }}
           >
             <div>
-              Hi there! I’m <span className="text-[#a024ff] text-[1.2rem] lg:text-[1.7rem]">Prashant Joshi</span>, a passionate{" "}
-              <strong className="text-[1.2rem] lg:text-[1.7rem]">React.js developer</strong> with over a year of experience building interactive,
+              Hi there! I’m <span className="text-[#a024ff] text-[1.2rem] lg:text-[1.7rem] xl:text-[1.5rem] ">Prashant Joshi</span>, a passionate{" "}
+              <strong className="text-[1.2rem] lg:text-[1.7rem] xl:text-[1.3rem] ">React.js developer</strong> with over a year of experience building interactive,
               user-friendly web applications. I specialize in creating dynamic front-end experiences, but recently, I’ve expanded my skills to
               Node.js, focusing on building robust back-end systems.
               <br />
