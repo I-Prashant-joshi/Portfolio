@@ -11,7 +11,7 @@ function Computer() {
   const isMedium = useMediaQuery(theme.breakpoints.down('md'));
 
   const size = isSmall ? 0.38 : isMedium ? 0.5 : 0.67;
-  const position = isSmall ? [1, -2, -0.5] : isMedium ? [1, -2.8, -0.5] : [1.2, -2.8, -1.5];
+  const position = isSmall ? [1, -1, -0.5] : isMedium ? [1, -2.8, -0.5] : [1.2, -2.8, -1.5];
   const rotation = [0, isSmall ? -0.3 : -0.7, -0.1];
 
   return (
@@ -23,7 +23,7 @@ function Computer() {
 }
 
 const ComputerCanvas = () => (
-  <Canvas  dpr={[1, 1.5]}  frameloop="demand" shadows camera={{ position: [20, 3, 5], fov: 25 }}>
+  <Canvas  dpr={[1, 1.5]}  frameloop="demand" shadows camera={{ position: [20, 3, 5], fov:30 }}>
     <ambientLight intensity={0.45} />
     <spotLight intensity={0.75} position={[-30, 50, 10]} angle={0.15} shadow-mapSize={1025} />
     <Suspense fallback={<CanvaLoader />}>

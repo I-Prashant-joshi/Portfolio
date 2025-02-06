@@ -14,7 +14,6 @@ function Earth() {
     var isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     var isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
     useEffect(()=>{
-      console.log("called ==>");
       if(isSmallScreen){
         setSize(2)
         setPosition(1)

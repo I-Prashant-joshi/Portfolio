@@ -39,7 +39,7 @@ function App() {
 
         <div className="mainDiv" >
         <Suspense fallback={<Loader />}>
-          <Navbar />
+          <Navbar />  
           <CoverPage />
           <AboutMe />
           <Project />

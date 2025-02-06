@@ -50,7 +50,7 @@ function Projects() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, margin: `0px 0px ${isSmallScreen ? "-30%" : "-50%"} 0px` }}
+        viewport={{ once: false, margin: `0px 0px ${isSmallScreen ? "-20%" : "-50%"} 0px` }}
       >
         Projects
       </motion.div>
@@ -59,7 +59,7 @@ function Projects() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once:onceData, margin: `0px 0px ${isSmallScreen ? "-30%" : "-60%"} 0px` }}
+        viewport={{ once:onceData, margin: `0px 0px ${isSmallScreen ? "-25%" : "-60%"} 0px` }}
       >
         <div className="text-[1rem] lg:text-[1.03rem] mt-[5px] lg:mt-[10px] lg:ml-[100px] font-mono bg-gradient-to-br from-white to-[#9e9d9f] bg-clip-text text-transparent flex justify-center w-[100%] lg:w-[70%]">
           {isSmallScreen ? "Welcome to my front-end projects showcase!" : 

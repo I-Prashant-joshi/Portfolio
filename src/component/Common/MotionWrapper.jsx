@@ -5,7 +5,7 @@ const MotionWrapper = ({ children, onceData, ...motionProps }) => (
       initial={{ opacity: 0, y: 250 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
-      viewport={{ once: onceData, margin: `0px 0px -1%  0px` }}
+      viewport={{ once: onceData, margin: `0px 0px -20%  0px` }}
       {...motionProps}
     >
       {children}

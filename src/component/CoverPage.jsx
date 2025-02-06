@@ -17,9 +17,9 @@ function CoverPage() {
   }, []);
 
   return (
-    <motion.div className="coverPage  h-screen">
+    <motion.div className="coverPage h-screen overflow-hidden">
       <section className="relative w-full h-full">
-        <div className="absolute top-[90px] lg:top-[120px] flex items-start max-w-7xl ml-8 lg:ml-40 gap-5">
+        <div className="absolute top-[50px] lg:top-[50px] flex items-start max-w-7xl ml-8 lg:ml-40 gap-5">
           <div className="flex justify-center gap-5 w-full">
             <div className="flex flex-col items-center">
               <div className="w-4 h-4 rounded-full bg-[#540bfe]"></div>
@@ -38,7 +38,7 @@ function CoverPage() {
         <ComputerCanvas />
         <motion.a
           href="#about"
-          className="absolute bottom-10 lg:bottom-0 w-full flex justify-center cursor-pointer"
+          className="absolute bottom-0  lg:bottom-0 w-full h-[12rem] flex justify-center cursor-pointer bg-[red ]"
         >
           <motion.div
             className="h-14 w-9 rounded-3xl border-2 border-white flex justify-center items-center p-2"

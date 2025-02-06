@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import '../App.css';
 import EarthCanva from './EarthCanva';
 import { motion } from 'framer-motion';
@@ -117,7 +117,8 @@ function Contact() {
           </motion.div>
           </div>
           <motion.div className=" flex-1" {...motionProps(200)}>
-            <EarthCanva />
+            <Suspense><EarthCanva /></Suspense>
+            
           </motion.div>
         </div>
       </div>
