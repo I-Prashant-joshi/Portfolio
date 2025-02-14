@@ -84,6 +84,7 @@ function AboutME() {
               <a
                 style={{ cursor: "pointer" }}
                 onClick={() => setExpand(!expand)}
+                className="flex lg:hidden"
               >
                 {expand ? " Read less..." : " Read more..."}
               </a>

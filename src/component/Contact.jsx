@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComponentMainFrame from './ComponentMainFrame';
-
+  
 const initialFormState = { name: '', email: '', message: '' };
 
 function Contact() {
