@@ -54,20 +54,32 @@ function Projects() {
       >
         Projects
       </motion.div>
+    
       <motion.div
-        className="flex justify-center text-center"
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once:onceData, margin: `0px 0px ${isSmallScreen ? "-25%" : "-60%"} 0px` }}
-      >
-        <div className="text-[1rem] lg:text-[1.03rem] mt-[5px] lg:mt-[10px] lg:ml-[100px] font-mono bg-gradient-to-br from-white to-[#9e9d9f] bg-clip-text text-transparent flex justify-center w-[100%] lg:w-[70%]">
-          {isSmallScreen ? "Welcome to my front-end projects showcase!" : 
-            "Welcome to my front-end projects showcase! This section features a collection of web applications and interfaces that highlight my expertise in crafting engaging, user-friendly experiences. I specialize in building responsive and dynamic web applications using modern technologies such as React.js"
-          }
-        </div>
-      </motion.div>
-
+  className="flex w-[100%] justify-center items-center"
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  viewport={{
+    once: false,
+    margin: `0px 0px ${isSmallScreen ? "-25%" : "-55%"} 0px`,
+  }}
+>
+  <motion.div
+    className="text-[1rem] bg-[#3a3a3a93] rounded-2xl lg:text-[1.03rem] mt-[5px] lg:mt-[10px] font-mono flex justify-center w-[100%] lg:w-[60%] text-center p-1 lg:p-2 relative overflow-hidden"
+    initial={{ backgroundSize: "0% 0%" }}
+    whileInView={{ backgroundSize: "100% 100%" }}
+    transition={{ duration: 2, ease: "easeInOut" }}
+    style={{
+      backgroundImage: "linear-gradient(to left, #3a3a3a93 0%, #3a3a3a93 100%)",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
+    {isSmallScreen
+      ? "Welcome to my front-end projects showcase!"
+      : "Welcome to my front-end projects showcase! This section features a collection of web applications and interfaces that highlight my expertise in crafting engaging, user-friendly experiences using modern technologies such as React.js"}
+  </motion.div>
+</motion.div>
       <div className="mt-[10px] lg:mt-[100px]">
         <Carousel responsive={responsive} swipeable={true} autoPlay={true} infinite={true}>
           {projectsData.map((item, index) => (
