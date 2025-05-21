@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 
 
 const ProjectItem = ({ item, onceData }) => (
-  <MotionWrapper  onceData={onceData} className="flex flex-col lg:flex-row">
+  <motion.div  onceData={onceData} className="flex flex-col lg:flex-row">
     <div className="flex h-full w-full lg:w-[45%] justify-center lg:items-center p-5 lg:p-10 rounded-2xl">
       <img src={item.source} alt="Project" loading="lazy"  className="h-[200px] lg:h-[500px] rounded-2xl" />
     </div>
@@ -29,7 +29,7 @@ const ProjectItem = ({ item, onceData }) => (
         </div>
       </div>
     </div>
-  </MotionWrapper>
+  </motion.div>
 );
 
 function Projects() {
@@ -80,13 +80,13 @@ function Projects() {
       : "Welcome to my front-end projects showcase! This section features a collection of web applications and interfaces that highlight my expertise in crafting engaging, user-friendly experiences using modern technologies such as React.js"}
   </motion.div>
 </motion.div>
-      <div className="mt-[10px] lg:mt-[100px]">
+      <MotionWrapper className="mt-[10px] lg:mt-[100px]">
         <Carousel responsive={responsive} swipeable={true} autoPlay={true} infinite={true}>
           {projectsData.map((item, index) => (
             <ProjectItem key={index} item={item} onceData={onceData} />
           ))}
         </Carousel>
-      </div>
+      </MotionWrapper>
     </div>
   );
 }

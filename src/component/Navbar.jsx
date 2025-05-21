@@ -3,7 +3,6 @@ import logo from '../../src/assets/PLogo.png';
 import { navData, navIcon } from '../constant/const';
 import { Box, SwipeableDrawer, List, ListItem, ListItemButton, ListItemText, Tooltip } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-scroll';
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);

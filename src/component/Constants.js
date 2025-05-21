@@ -2,10 +2,16 @@ import omniFood from '../assets/omniFood.png'
 import shop from '../assets/3dshop.png'
 import movie from '../assets/movieApp.png'
 import ectromart from '../assets/ElectroMart.png'
-
-
+import ERide from '../assets/E-Ride.png'
 
 export const projectsData=[
+    {
+        projectName:"E-Ride App",
+        source:ERide,
+        description:"E-Ride is a modern ride-booking web application designed for seamless transportation services across the UK. As a dedicated React.js Developer on the project, I was responsible for building and maintaining intuitive and responsive user interfaces using React and Material-UI. The frontend seamlessly integrated with a Ruby on Rails backend to support core features such as real-time ride scheduling, notification, user authentication, and booking management.",
+        techUsed:" React.js, HTML, MUI, Javascript, Ruby on rails, Action Cable",
+        link:"https://erideapp-591978-react.b591978.dev.eastus.az.svc.builder.cafe/"
+    }, 
     {
         projectName:"Omni Food",
         source:omniFood,
@@ -34,6 +40,7 @@ export const projectsData=[
         techUsed:" React.js, HTML, MUI, Javascript,Node.js,Express.js",
         link:"https://electromaartweb.netlify.app"
     }, 
+   
  
 
 ]

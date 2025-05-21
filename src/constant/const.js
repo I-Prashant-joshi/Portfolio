@@ -1,6 +1,6 @@
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DescriptionIcon from "@mui/icons-material/Description";
-import resume from '/Resume.pdf'
+import resume from '/Prashant_Resume_Reactjs.pdf'
 export const navData=[
     {
         name:"About",
