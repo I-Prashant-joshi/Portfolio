@@ -76,7 +76,7 @@ function AboutME() {
           >
             <div>
               Hi there! I’m <span className="text-[#a024ff] text-[1.2rem] lg:text-[1.7rem] xl:text-[1.5rem] ">Prashant Joshi</span>, a passionate{" "}
-              <strong className="text-[1.2rem] lg:text-[1.7rem] xl:text-[1.3rem] ">React.js developer</strong> with over a year of experience building interactive,
+              <strong className="text-[1.2rem] lg:text-[1.7rem] xl:text-[1.9rem]">React.js developer</strong> with 2 years of experience building interactive,
               user-friendly web applications. I specialize in creating dynamic front-end experiences, but recently, I’ve expanded my skills to
               Node.js, focusing on building robust back-end systems.
               <br />
