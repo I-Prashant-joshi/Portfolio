@@ -20,12 +20,12 @@ export const navData=[
  
 ]
    export const navIcon=[
-        {
-            icon:DescriptionIcon,
-            key:1,
-            linkname:resume,
-            Download:"Resume"
-        },
+        // {
+        //     icon:DescriptionIcon,
+        //     key:1,
+        //     linkname:resume,
+        //     Download:"Resume"
+        // },
         {
             icon:LinkedInIcon,
             key:2,
