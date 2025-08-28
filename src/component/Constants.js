@@ -3,6 +3,8 @@ import shop from '../assets/3dshop.png'
 import movie from '../assets/movieApp.png'
 import ectromart from '../assets/ElectroMart.png'
 import ERide from '../assets/E-Ride.png'
+import post from '../assets/postLab.png'
+
 
 export const projectsData=[
     {
@@ -11,6 +13,13 @@ export const projectsData=[
         description:"E-Ride is a modern ride-booking web application designed for seamless transportation services across the UK. As a dedicated React.js Developer on the project, I was responsible for building and maintaining intuitive and responsive user interfaces using React and Material-UI. The frontend seamlessly integrated with a Ruby on Rails backend to support core features such as real-time ride scheduling, notification, user authentication, and booking management.",
         techUsed:" React.js, HTML, MUI, Javascript, Ruby on rails, Action Cable",
         link:"https://erideapp-591978-react.b591978.dev.eastus.az.svc.builder.cafe/"
+    }, 
+      {
+        projectName:"PostLab Clone",
+        source:post,
+        description:"A modern website clone of PostLab built with Next.js, Tailwind CSS, Lenis, and Framer Motion. The project focuses on delivering a smooth, responsive, and visually engaging user experience by leveraging advanced animations and performance optimization techniques.",
+        techUsed:" Next.js, HTML, Tailwind, Javascript, Framer Motion, Lenis ",
+        link:"https://postlabs.netlify.app"
     }, 
     {
         projectName:"Omni Food",
